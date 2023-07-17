@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Ad</title>
+</head>
+<body>
+<h1>Create Ad</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+    </div>
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+    </div>
+    <div>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+    </div>
+    <div>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+    </div>
+    <div>
+        <label for="photos">Photos:</label>
+        <input type="file" id="photos" name="photos" multiple required>
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+    </div>
+    <div>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+    </div>
+    <button type="submit">Create</button>
+</form>
+</body>
+</html>
